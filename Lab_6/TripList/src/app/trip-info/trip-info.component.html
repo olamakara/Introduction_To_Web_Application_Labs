@@ -1,0 +1,31 @@
+<div><a routerLink="/offer" routerLinkActive="active"><i class="fa-solid fa-arrow-left"></i></a></div>
+<br>
+<div class="slider-container">
+    <div class="button"><button (click)="nextSlide()"><i class="fa-solid fa-chevron-left"></i></button></div>
+    <div class="photos-container">
+        <ng-container *ngFor="let img of trip[0].img; let i = index">
+            <img class="photo" [hidden]="slideIndex != i" src="{{ trip[0].img[i] }}" alt="{{ trip[0].tripName }}">
+        </ng-container>
+    </div>
+    <div class="button"><button (click)="previousSlide()"><i class="fa-solid fa-chevron-right"></i></button></div>
+</div>
+
+<div>
+    <p class="trip-title">" {{ trip[0].tripName | titlecase }} "</p>
+    <p>
+        <i *ngFor="let star of cardService.makeFakeArray(getRate(trip[0].rate, trip[0].numberOfRates))"><i class="fa-solid fa-star"></i></i>
+        <strong [hidden]="trip[0].rate == 0"> {{ getRate(trip[0].rate, trip[0].numberOfRates) }}</strong>
+    </p>
+    <p><strong>Miejsce docelowe:</strong> {{ trip[0].country }}</p>
+    <p><strong>Opis:</strong> {{ trip[0].description }}</p>
+    <p><strong>Cena:</strong> {{ trip[0].price * currencyConverter.currencyConverter | currency:currencyConverter.currentCurrency:"symbol" }}</p>
+</div>
+<div class="buttons-container">
+    <p class="places"><strong>Liczba miejsc: </strong>{{trip[0].numberOfPlaces}}</p>
+    <button class="plus"(click)="addTrip(trip[0])" [hidden]="trip[0].numberOfPlaces == 0">+</button>
+    <button class="minus"(click)="removeTrip(trip[0])" [hidden]="trip[0].numberOfPlaces == tripMaxAmountOfPlaces[0]">-</button>
+</div><br><br>
+
+<app-review-form></app-review-form>
+
+

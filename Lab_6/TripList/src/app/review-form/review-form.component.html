@@ -1,0 +1,66 @@
+<!-- <p>review-form works!</p> -->
+
+<div *ngIf="auth.userRoles.banned == true || auth.userRoles.menager == true || !(canAddRate())">Nie możesz ocenić tej wycieczki</div>
+<div class="rate-container" *ngIf="auth.userRoles.banned == false && auth.userRoles.menager == false && canAddRate()">
+    <h3>OCEŃ WYCIECZKĘ</h3>
+    <div class="rating">
+        <!-- <div class="ocena">Ocena</div> -->
+        <div class="stars">
+            <ng-container *ngFor="let bool of showRate; index as i">
+                <!-- <input type="checkbox" value=i/> -->
+                <label (click)="rate(i)"></label>
+            </ng-container>
+        </div>
+        <div class="rating-number">
+            <ng-container *ngFor="let bool of showRate; index as i">
+                <div class="rate" [ngStyle]="{'background-color': colorRate[i]}" [hidden]="showRate[i]==false">
+                    {{rating[i]}}.0
+                    <button class="rate-button" (click)="rateTrip(i + 1)">OCEŃ</button>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
+<br><br>
+
+<p *ngIf="auth.userRoles.banned == true || !(canAddReview())">Nie możesz zostawić swojej opinii</p>
+<div class="review-container" *ngIf="auth.userRoles.banned == false && canAddReview()">
+    <h3>ZOSTAW SWOJĄ OPINIĘ</h3>
+    <div class="decoration">
+        <div class="hr"><hr></div>
+        <div class="form-container">
+            <form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+                <div class="opinion-inside">
+                    <div class="nick">
+                        <label>NICK</label>
+                        <input name="userNick" type="string" formControlName="userNick">
+                    </div>
+                    <div class="opinion">
+                        <label>Opinia</label>
+                        <textarea name="opinion" type="string" formControlName="opinion" placeholder="50 - 500 words" rows="6" cols="20"></textarea>
+                    </div>
+                    <div class="date">
+                        <label>Data zakupu/skorzystania z wycieczki</label>
+                        <input name="date" type="date" formControlName="date">
+                    </div> 
+                </div>
+                <button class="submit" type="submit">Dodaj opinię</button>
+            </form>
+        </div>
+        <div class="hr"><hr></div>
+    </div>
+</div>
+<br><br>
+<div>
+    <h3 class="h3-op">OPINIE</h3><hr class="hr-op"><br>
+    <ng-container *ngFor="let boughtTrip of boughtTrips">
+        <div class="review" *ngIf="boughtTrip.opinion">
+            <!-- <i *ngFor="let star of cardService.makeFakeArray(review.rate)"><i class="fa-solid fa-star"></i></i> -->
+            <p class="rev-trip-name">{{ boughtTrip.tripName }}</p>
+            <p class="rev-nick">{{ boughtTrip.userNick }}</p>
+            <p class="rev-date">{{ boughtTrip.date }}</p>
+            <p class="rev-opinion">{{ boughtTrip.opinion }}</p>
+            <hr class="hr-rev"><br><br>
+        </div>
+    </ng-container>
+</div>

@@ -1,0 +1,42 @@
+<div>
+    <div class="add-trip">DODAJ WYCIECZKĘ</div>
+    <form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+        <div class="form-container">
+            <div class="form-inside">
+                <!-- <label>Nazwa wycieczki</label> -->
+                <input class="trip-name" name="tripName" type="text" formControlName="tripName" placeholder="Nazwa wycieczki">
+            </div>
+            <div>
+                <!-- <label>Kraj</label> -->
+                <input class="country" name="country" type="text" formControlName="country" placeholder="Kraj">
+            </div>
+            <div>
+                <!-- <label>Data wyjazdu</label> -->
+                <input class="dates start" name="start" type="date" formControlName="start" placeholder="Data wyjazdu"> -
+                <input class="dates end" name="end" type="date" formControlName="end" placeholder="Data powrotu">
+            </div>
+            <!-- <div>
+                <label>Data powrotu</label>
+                <input class="dates end" name="end" type="date" formControlName="end" placeholder="Data powrotu">
+            </div>  -->
+            <div>
+                <!-- <label>Cena</label> -->
+                <input class="price" name="price" type="number" formControlName="price" placeholder="Cena ($)">
+            </div>
+            <div>
+                <!-- <label>Ilość miejsc</label> -->
+                <input class="places" name="numberOfPlaces" type="number" formControlName="numberOfPlaces" placeholder="Ilość miejsc">
+            </div>
+            <div>
+                <!-- <label>Opis</label> -->
+                <textarea name="description" id="description" formControlName="description" cols="30" rows="8" placeholder="Opis"></textarea>
+                <!-- <input name="description" type="text" formControlName="description" placeholder="Opis"> -->
+            </div>
+            <div>
+                <!-- <label>Zdjęcie</label> -->
+                <input name="img" type="text" formControlName="img" placeholder="Zdjęcia">
+            </div>
+            <button class="remove" type="submit">Dodaj wycieczkę</button>
+        </div>
+    </form><hr>
+</div>

@@ -1,0 +1,54 @@
+<!-- <h3>Aktualny tryb persystencji logowania: {{ selectedPersistence }}</h3>
+<div class="inline">
+    <h3>Wybierz tryb persystencji logowania:</h3>
+    <select [(ngModel)]="selectedPersistence" (ngModelChange)="chosenPersistence()">
+        <option>LOCAL</option>
+        <option>SESSION</option>
+        <option>NONE</option>
+        <option *ngFor="let item of choice" [ngValue]="item">{{ item }}</option>
+    </select>
+</div> -->
+
+<div class="container" *ngFor="let user of users; let i = index">
+    <div class="user-info">
+        <div class="user-roles">
+            <div>
+                <button class="arrow" (click)="ifDisplayRoles(i)"><i *ngIf="!displayRoles[i]" class="fa-solid fa-chevron-down"></i><i *ngIf="displayRoles[i]" class="fa-solid fa-chevron-up"></i></button>
+                {{ user.email }}
+                <ul *ngIf="displayRoles[i]">
+                    <li>
+                        <p>Admin</p>
+                        <div>
+                            <i (click)="changeAdmin(user.uid, 'true')" [ngStyle]="{'color': user.roles.admin ? '#ADE792': '#D6E4E5'}" class="fa-solid fa-circle-check change-role"></i>
+                            <i (click)="changeAdmin(user.uid, 'false')" [ngStyle]="{'color': user.roles.admin ? '#D6E4E5': '#FF8787'}" class="fa-solid fa-circle-xmark change-role"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Menager</p>
+                        <div>
+                            <i (click)="changeMenager(user.uid, 'true')" [ngStyle]="{'color': user.roles.menager ? '#ADE792': '#D6E4E5'}" class="fa-solid fa-circle-check change-role"></i>
+                            <i (click)="changeMenager(user.uid, 'false')" [ngStyle]="{'color': user.roles.menager ? '#D6E4E5': '#FF8787 '}" class="fa-solid fa-circle-xmark change-role"></i>
+                        </div>
+                    </li>
+                    <li>
+                        <p>Klient</p>
+                        <div>
+                            <i (click)="changeClient(user.uid, 'true')" [ngStyle]="{'color': user.roles.client ? '#ADE792': '#D6E4E5'}" class="fa-solid fa-circle-check change-role"></i>
+                            <i (click)="changeClient(user.uid, 'false')" [ngStyle]="{'color': user.roles.client ? '#D6E4E5': '#FF8787 '}" class="fa-solid fa-circle-xmark change-role"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div *ngIf="user.roles.banned == false"><button class="ban-button" (click)="giveBan(user.uid)">DAJ BAN</button></div>
+        <div *ngIf="user.roles.banned == true"><button class="ban-button" (click)="removeBan(user.uid)">USUŃ BAN</button></div>
+    </div>
+</div>
+
+<!-- 
+{
+    "rules": {
+      ".read": "now < 1673823600000",  // 2023-1-16
+      ".write": "now < 1673823600000",  // 2023-1-16
+    }
+  } -->

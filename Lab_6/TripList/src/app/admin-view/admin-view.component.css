@@ -1,0 +1,63 @@
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.user-roles {
+    display: flex;
+    align-self: center;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.change-role {
+    cursor: pointer;
+    margin: 18px 2px;
+}
+
+.arrow {
+    border: none;
+    background-color: #fff;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.ban-button {
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    background-color: #B6E2A1;
+    border: none;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    /* margin-top: 10px; */
+}
+
+@media only screen and (min-width: 800px) {
+    .container {
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .container {
+        margin-right: 200px;
+        margin-left: 200px;
+    }
+}
+
+
+

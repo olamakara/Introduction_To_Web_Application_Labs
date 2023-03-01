@@ -1,0 +1,53 @@
+<div class="modifying-container">
+
+    <div><app-add-trip></app-add-trip></div>
+    
+    <div class="whole-trip" *ngFor="let trip of trips; let j = index">
+        
+        <div class="slider-container">
+            <div class="button"><button class="arrow" (click)="currentImagesIndexes[j] = (currentImagesIndexes[j] + 1) % trip.img.length"><i class="fa-solid fa-chevron-left"></i></button></div>
+            <div class="photos-container">
+                <ng-container *ngFor="let img of trip.img; let i = index">
+                    <img class="photo" [hidden]="currentImagesIndexes[j] != i" src="{{ trip.img[i] }}" alt="{{ trip.tripName }}">
+                    <button class="bin" (click)="fireBase.deleteImageAtIndex(trip.id, i)" [hidden]="currentImagesIndexes[j] != i"><i class="fa-solid fa-trash-can"></i></button>
+                </ng-container>
+            </div>
+            <div class="button"><button class="arrow" (click)="currentImagesIndexes[j] = (currentImagesIndexes[j] + trip.img.length - 1) % trip.img.length"><i class="fa-solid fa-chevron-right"></i></button></div>
+        </div>
+
+        <form>
+            <div>
+                <!-- onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';" -> wydaje sie ze moze dzialac  [style.width.ch]="box1.value.length" -->
+                <input class="trip-name" #box1 onkeypress="this.style.width = ((this.value.length + 2) * 8 * 1.6) + 'px';" (keyup.enter)="fireBase.changeTripName(trip.id, box1.value)" type="text" name="tripName" id="tripName" value="{{trip.tripName}}" required>
+            </div>
+            <div>
+                <input class="country" #box2 onkeypress="this.style.width = ((this.value.length + 2) * 8 * 1.6) + 'px';" (keyup.enter)="fireBase.changeCountry(trip.id, box2.value)" type="text" name="country" id="country" value="{{trip.country}}" required>
+            </div>
+            <!-- <div>
+                <input class="dates" #box3 (keyup.enter)="fireBase.changeStartDate(trip.id, box3.value)" type="date" name="start" id="start" value="{{trip.start}}" required>
+            </div> -->
+            <div>
+                <input class="dates start" #box3 (keyup.enter)="fireBase.changeStartDate(trip.id, box3.value)" type="date" name="start" id="start" value="{{trip.start}}" required> -
+                <input class="dates end" #box4 (keyup.enter)="fireBase.changeEndDate(trip.id, box4.value)" type="date" name="end" id="end" value="{{trip.end}}" required>
+            </div>
+            <div>
+                <i class="fa-solid fa-dollar-sign currency"></i><input class="price" #box5 onkeypress="this.style.width = ((this.value.length + 2) * 8 * 1.6) + 'px';" (keyup.enter)="fireBase.changePrice(trip.id, toInt(box5.value))" type="number" name="price" id="price" value="{{trip.price}}" required>
+            </div>
+            <div>
+                <i class="fa-solid fa-user-group people"></i><input class="places" #box6 onkeypress="this.style.width = ((this.value.length + 2) * 8 * 1.6) + 'px';" (keyup.enter)="changePlaces(trip.id, toInt(box6.value))" type="number" name="numberOfPlaces" id="numberOfPlaces" value="{{trip.numberOfPlaces}}" required>
+            </div>
+            <div>
+                <!-- <input #box7 onkeypress="this.style.width = ((this.value.length + 2) * 8 * 1.6) + 'px';" (keyup.enter)="fireBase.changeDescription(trip.id, box7.value)" type="text" name="description" id="description" value="{{trip.description}}" required> -->
+                <textarea #box7 (keyup)="fireBase.changeDescription(trip.id, box7.value)" type="text" name="description" id="description" value="{{trip.description}}" name="description" id="description" cols="30" rows="8"></textarea>
+            </div>
+            <div>
+                <input #box8 onkeypress="this.style.width = ((this.value.length + 2) * 8 * 1.6) + 'px';" (keyup.enter)="fireBase.addImage(trip.id, box8.value)" type="text" name="img" id="img" placeholder="dodaj zdjęcie" required>
+            </div>
+        </form>
+        <button class="remove" (click)="fireBase.removeTrip(trip.id)">USUŃ</button>
+        <hr>
+    </div>
+
+</div>
+
+

@@ -1,0 +1,225 @@
+.rating {
+    margin-bottom: 20px;
+}
+
+.rating div {
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    border: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    /* position: absolute !important; */
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    opacity: 0;
+}
+
+.rating label {
+    position: relative;
+    float: right;
+    color: #C8C8C8;
+}
+
+.rating label:before {
+    margin: 5px;
+    content: "\f005";
+    font-family: FontAwesome;
+    display: inline-block;
+    font-size: 1.5em;
+    color: #ccc;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+input[type="checkbox"]:checked ~ .rating label:before {
+    color: #FFC107;
+}
+
+label:hover ~ label:before {
+    color: #ffdb70;
+}
+
+.rating label:hover:before {
+    color: #FFC107;
+}
+
+.stars {
+    /* margin-top: 15px;
+    margin-right: 15px; */
+    font-size: 0.7rem;
+    width: 144.5px;
+}
+
+/* .rating {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+} */
+
+.rate {
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 144.5px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.rating-number {
+    align-self: center;
+}
+
+.opinion-inside div {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.ocena {
+    padding-bottom: 4px;
+}
+
+.submit {
+    background-color: #B6E2A1;
+    border: none;
+    border-radius: 10px;
+    margin: 15px 0 30px 0;
+    color: #fff;
+    padding: 5px 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 15px auto;
+}
+
+.form-container {
+    border: 3px solid #B6E2A1;
+    border-radius: 30px;
+    padding: 10px 30px 20px 30px;
+    display: inline-block;
+}
+
+.trip-name input, .nick input, .opinion textarea {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.date input {
+    width: 100px;
+    margin-top: 5px;
+}
+
+.form-container input, .form-container textarea {
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #B2B2B2;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.form-container input:focus, .form-container textarea:focus {
+    outline: none;
+}
+
+.hr-op {
+    border: none;
+    border-top: 3px solid #B6E2A1;
+    margin-top: 0;
+    width: 50px;
+    margin-left: 0;
+}
+
+.h3-op {
+    margin-bottom: 5px;
+}
+
+.hr-rev {
+    border: none;
+    border-top: 2px solid #B6E2A1;
+    margin-top: 0;
+}
+
+.rev-nick {
+    margin-bottom: 2px;
+}
+
+.rev-trip-name {
+    font-size: 1.3rem;
+}
+
+.rev-date {
+    font-size: 0.8rem;
+    margin-top: 0;
+}
+
+.fa-star {
+    color: #FFC107;
+}
+
+.review-container label {
+    text-align: left;
+}
+
+.review-container {
+    text-align: center;
+}
+
+.rate-container {
+    text-align: center;
+}
+
+.rate-button {
+    background-color: inherit;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.rate-button:hover {
+    color: rgb(77, 74, 74);
+}
+
+.decoration {
+    display: flex;
+    gap: 20px;
+}
+
+.hr {
+    width: 100%;
+    align-self: center;
+}
+
+hr {
+    border: none;
+    border-top: 4px dotted #B6E2A1;
+}
+
+@media only screen and (min-width: 500px) {
+    .form-container {
+        min-width: 70%;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .form-container {
+        min-width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .form-container {
+        min-width: 400px;
+    }
+}

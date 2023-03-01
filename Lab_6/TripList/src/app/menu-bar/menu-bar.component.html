@@ -1,0 +1,46 @@
+<nav>
+    <div>
+        <a class="navLogo" routerLink="/start" routerLinkActive="active"><strong>R</strong>ainbow</a>
+        <input type="checkbox" id="checkBox">
+
+        <ul class="navLinks">
+            <li><a routerLink="/offer" routerLinkActive="active">OFERTA</a></li>
+            <li *ngIf="auth.userRoles.menager == true"><a routerLink="/trip-menager" routerLinkActive="active">EDYTUJ   </a></li>
+            <li *ngIf="auth.userRoles.admin == true"><a routerLink="/admin-view" routerLinkActive="active">WIDOK ADMINA</a></li>
+            <!-- <li><a routerLink="/admin-view" routerLinkActive="active">WIDOK ADMINA</a></li> -->
+
+            <li *ngIf="auth.userData == null"><a routerLink="/log-in" routerLinkActive="active">ZALOGUJ SIĘ</a></li>
+            <li *ngIf="auth.userData == null"><a routerLink="/sign-up" routerLinkActive="active">ZAREJESTRUJ SIĘ</a></li>
+            <li *ngIf="auth.userData != null"><a routerLink="/start" routerLinkActive="active" (click)="auth.signOut()">WYLOGUJ SIĘ</a></li>
+        </ul>
+    </div>
+
+    <div class="icons">
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fa-solid fa-bell"></i></button>
+            <div class="dropdown-content">
+                {{ findNextTrip() }}
+                <!-- https://bennettfeely.com/clippy/ -->
+            </div>
+        </div>
+        <div class="basket"><a class="dropbtn" routerLink="/basket" routerLinkActive="active"><i class="fa-solid fa-basket-shopping"></i></a>
+        {{cardService.sumOfTrips}} - {{cardService.priceOfTrips * currencyConverter.currencyConverter | currency:currencyConverter.currentCurrency:"symbol"}}</div>
+        <div class="dropdown">
+            <a class="dropbtn" routerLink="/user-info" routerLinkActive="active"><i class="fa-regular fa-circle-user"></i></a>
+            <!-- <div class="dropdown-content">
+                jakieś tam user info
+            </div> -->
+        </div>
+        <div class="welcome" *ngIf="auth.userData != null">Witaj {{auth.userData.email}}</div>
+        <div>
+            <label for="checkBox" class="buttonLabel" id="open"><img src="../../assets/hamburger.svg" alt=""></label>
+            <label for="checkBox" class="buttonLabel" id="close"><img src="../../assets/close.svg" alt=""></label>
+        </div>
+    </div>
+</nav>
+<div class="nothing"></div>
+<div class="currency">
+    <button class="usd" (click)="currencyConverter.setDollar()"><i class="fa-solid fa-dollar-sign"></i></button>
+    <button class="eur" (click)="currencyConverter.setEuro()"><i class="fa-solid fa-euro-sign"></i></button>
+    <button class="pln" (click)="currencyConverter.setZloty()"><i class="fa-solid fa-z"></i><i class="fa-solid fa-litecoin-sign"></i></button>
+</div>

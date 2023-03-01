@@ -1,0 +1,212 @@
+body {
+    background-color: #FFDDD2;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+nav {
+    background-color: #B6E2A1;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+.nothing {
+    height: 3rem;
+}
+
+.dropbtn {
+    font-size: 1.3rem;
+}
+
+.icons div {
+    margin: auto 0 auto 10px;
+}
+
+p {
+    margin: 1em;
+    text-align: justify;
+}
+
+.navHeader {
+    font-size: x-large;
+}
+
+.navLinks {
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    float: right;
+}
+
+.buttonLabel {
+    display: none;
+    margin-right: 30px;
+}
+
+.navLinks li {
+    display: inline-block;
+    padding: 0.4em;
+}
+
+.navLinks li:hover {
+    background-color: #b4e2a1;
+}
+
+.navLinks li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.4em;
+    height: 100%;
+}
+
+#checkBox {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    .buttonLabel {
+        width: 8px;
+        margin-right: 50px;
+    }
+
+    .welcome {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    nav {
+        height: 10vh;
+        padding: 0 1em;
+    }
+
+    .nothing {
+        height: 4.6rem;
+    }
+
+    nav label img {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
+
+    .buttonLabel {
+        display: block;
+    }
+
+    .navLinks {
+        position: fixed;
+        width: 100vw;
+        height: 90vh;
+        right: -110%;
+        bottom: 0;
+        background-color: #b5e2a1b4;
+        text-align: center;
+        padding: 0;
+        transition: right 0.5s ease;
+    }
+
+    .navLinks li {
+        display: block;
+        margin: 0;
+        padding: 2em, 0;
+    }
+
+    .navLinks li a {
+        font-size: xx-large;
+    }
+
+    #close {
+        display: none;
+    }
+
+    #checkBox:checked ~ ul {
+        right: 0;
+    }
+
+    #checkBox:checked ~ #open {
+        display: none;
+    }
+
+    #checkBox:checked ~ #close {
+        display: block;
+    }
+}
+
+.dropbtn {
+    background-color: #B6E2A1;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    top: 37px;
+    left: -25px;
+    display: none;
+    position: absolute;
+	background-color: #f1f1f1;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 10px;
+}
+.dropdown-content:after, .dropdown-content:before {
+	bottom: 100%;
+	right: 76%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.dropdown-content:after {
+	border-color: rgba(128, 151, 213, 0);
+	border-bottom-color: #f1f1f1;
+	border-width: 10px;
+}
+  
+.dropdown:hover .dropdown-content {display: block;}
+  
+.icons {
+    display: flex;
+}
+
+.currency {
+    text-align: right;
+    margin: 5px 6px;
+}
+
+.currency button {
+    border: none;
+    border-radius: 5px;
+    background-color: #B6E2A1;
+    margin-left: 5px;
+    padding: 5px 7px;
+    cursor: pointer;
+}
+
+.navLogo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.4em;
+}
+
+.welcome {
+    font-size: 0.8rem;
+}

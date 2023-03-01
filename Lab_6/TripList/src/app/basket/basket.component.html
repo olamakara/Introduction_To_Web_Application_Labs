@@ -1,0 +1,13 @@
+<div class="history">
+    <a routerLink="/history" routerLinkActive="active">Historia wycieczek</a>
+</div><br>
+<ng-container *ngIf="basketService.basket.length == 0">
+    <h3>Brak wycieczek w koszyku :(</h3><hr>
+</ng-container>
+<ng-container *ngIf="basketService.basket.length > 0">
+    <div class="basket-item" *ngFor="let item of basketService.basket; index as i">
+        <p>{{i+1}}. {{item.tripName}} - ${{item.price}}</p>
+        <button class="pay" (click)="pay(i)">ZAPŁAĆ</button>
+    </div>
+    <p>Razem: {{cardService.priceOfTrips * currencyConverter.currencyConverter | currency:currencyConverter.currentCurrency:"symbol"}}</p><hr>
+</ng-container>

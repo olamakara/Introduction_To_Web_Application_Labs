@@ -1,0 +1,20 @@
+<div class="login_container">
+  <div class="form -container">
+    <h3>LOGOWANIE</h3><br><br>
+    <form [formGroup]="loginForm">
+      <div>
+        <input id="name" type="text" formControlName="login" placeholder="Email"/>
+      </div>
+  
+      <div>
+        <input id="password" type="password" formControlName="password" placeholder="Hasło"/>
+      </div>
+    </form>
+    <br>
+    <button type="submit" class="button-accent" (click)="submitForm()">Zaloguj się</button>
+    <p *ngIf="showError">Wprowadź poprawne dane!</p>
+    <p *ngIf="showOk">Poprawnie zalogowano!</p>
+  </div>
+  <br><br><br>
+  <div class="signup">Jeśli nie masz jeszcze konta <a routerLink="/sign-up" routerLinkActive="active">zaresjestruj się</a>!</div>
+</div>

@@ -1,0 +1,30 @@
+.form-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    background-color: #B6E2A1;
+    border: none;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    border: 1px solid #B2B2B2;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+input:focus {
+    background-color: #EAEAEA;
+    outline: none;
+}
