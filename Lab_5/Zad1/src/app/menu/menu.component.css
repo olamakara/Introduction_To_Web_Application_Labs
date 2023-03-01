@@ -1,0 +1,19 @@
+.menu-bar {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.menu-position {
+    background-color: #A555EC;
+    color: #FFF;
+    font-size: 1.1rem;
+    padding: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.menu-position:hover {
+    background-color: #D09CFA;
+}

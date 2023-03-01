@@ -1,0 +1,27 @@
+<!-- <p>add-post works!</p> -->
+<div class="form-container">
+    <p class="form-title">WRITE YOUR OWN POST</p>
+    <form [formGroup]="post" (ngSubmit)="onSubmit()">
+        <div class="form-element">
+            <label for="userId">User ID</label>
+            <input id="userId" type="number" formControlName="userId">
+            <p class="alert" *ngIf="post.get('userId')!.hasError('required') &&
+            (post.get('userId')!.touched || post.get('userId')!.dirty)">User ID is required</p>
+            <p class="alert" *ngIf="post.get('userId')!.hasError('min') &&
+            (post.get('userId')!.touched || post.get('userId')!.dirty)">User ID must be grater than 0</p>
+        </div>
+        <div class="form-element">
+            <label for="title">Post Title</label>
+            <input id="title" type="text" formControlName="title">
+            <p class="alert" *ngIf="post.get('title')!.hasError('required') &&
+            (post.get('title')!.touched || post.get('title')!.dirty)">Title is required</p>
+        </div>
+        <div class="form-element">
+            <label for="body">Post Text</label>
+            <input id="body" type="text" formControlName="body">
+            <p class="alert" *ngIf="post.get('body')!.hasError('required') &&
+            (post.get('body')!.touched || post.get('body')!.dirty)">Text is required</p>
+        </div>
+        <div class="add-button"><button type="submit" [hidden]="!post.valid">ADD POST</button></div>
+    </form>
+</div>

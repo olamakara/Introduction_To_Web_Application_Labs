@@ -1,0 +1,23 @@
+.post {
+    background-color: #FFEFEF;
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 10px #F3CCFF; */
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.post-id {
+    padding-top: 20px;
+    font-size: 0.6rem;
+}
+
+.post-title {
+    color: #A555EC;
+    font-size: 1.2rem;
+}
+
+.post-user {
+    font-size: 0.8rem;
+    padding-bottom: 20px;
+    text-align: right;
+}

@@ -1,0 +1,12 @@
+<app-add-post></app-add-post>
+<!-- <p>posts works!</p> -->
+<div class="posts-container">
+    <ng-container *ngFor="let post of data.posts">
+        <div class="post">
+            <p class="post-id">Post ID: {{ post.id }}</p>
+            <p class="post-title">{{ post.title }}</p>
+            <p class="post-body">{{ post.body }}</p>
+            <p class="post-user">User ID: {{ post.userId }}</p>
+        </div>
+    </ng-container>
+</div>
