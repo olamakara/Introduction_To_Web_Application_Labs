@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(220, 211, 211);
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.blake {
+    height: 90vh;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    gap: 10px;
+}
+
+.main-call {
+    text-align: center;
+}
+
+.icon {
+    width: 35px;
+}
+
+.icons {
+    position: absolute;
+    bottom: 10px;
+    left: 43%;
+}
+
+input[type="range"] {
+    appearance: slider-vertical;
+    position: absolute;
+    bottom: 30px;
+}
+
+.ryan {
+    border-radius: 10px;
+    top: 40px;
+    left: 40px;
+    position: absolute;
+    width: 80px;
+}
+
+.video-chat {
+    background-color: #153462;
+    background-image: url(../Zadanie7/blake-smaller-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 15px;
+    position: relative;
+    height: 600px;
+    /* margin: 10px; */
+    margin: 2%;
+    /* padding-top: 555px; */
+    width: 96%;
+}
+
+.sth {
+    height: 700px;
+    width: 100%;
+}
+
+@media only screen and (max-width: 520px) {
+
+    .video-chat {
+        background-size: cover;
+    }
+}

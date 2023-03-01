@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 8</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+
+        @media (max-width: 700px) {
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                gap: 50px;
+            }
+
+            .left {
+                animation-name: gora;
+                animation-duration: 4s;
+                position: relative;
+                margin: 30px auto;
+                top: 0;
+                left: 0;
+            }
+
+            .form {
+                animation-name: dol;
+                animation-duration: 4s;
+                position: relative;
+                top: 0;
+                right: 0;
+                margin: 30px auto;
+                width: 50%;
+            }
+
+            @keyframes gora {
+                from {top: -55vw;}
+                to {top: 0;}
+            }
+
+            @keyframes dol {
+                0% {transform: translateY(100%);}
+                100% {transform: translateY(0);}
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="bg"></div>
+    <section class="container">
+        
+        <div class="left">
+
+            <h1>Nagłówek tekstowy</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fugit alias hic quam molestias facilis! Porro dicta harum maxime doloribus, expedita reprehenderit perspiciatis cupiditate odit, praesentium necessitatibus, aliquam sequi nam.</p>
+            <button class="more-info">Więcej info</button>
+
+        </div>
+
+        <div class="form">
+            <div class="blue-bg"></div>
+            <h2>Formularz testowy</h2>
+            <form action="">
+                <div>
+                    <!-- <label for="name">Enter your name: </label> -->
+                    <input class="form-item" type="text" name="name" id="name" placeholder="Name" required>
+                </div>
+                <br>
+                <div>
+                    <!-- <label for="name">Enter your name: </label> -->
+                    <input class="form-item" type="text" name="name" id="name" placeholder="Company Name" required>
+                </div>
+                <br>
+                <div>
+                    <!-- <label for="email">Enter your email: </label> -->
+                    <input class="form-item" type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+                <br>
+                <div>
+                    <input class="send" type="submit" value="Send">
+                </div>
+            </form>
+
+        </div>
+        
+    </section>
+    
+    <!-- <div class="blue-bg"></div> -->
+    
+</body>
+</html>

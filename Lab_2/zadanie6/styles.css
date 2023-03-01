@@ -1,0 +1,103 @@
+body {
+    background-color: #FFDDD2;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+nav {
+    background-color: #FF8DC7;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+}
+
+p {
+    margin: 1em;
+    text-align: justify;
+}
+
+.navHeader {
+    font-size: x-large;
+}
+
+.navLinks {
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    float: right;
+}
+
+.buttonLabel {
+    display: none;
+}
+
+.navLinks li {
+    display: inline-block;
+    padding: 0.4em;
+}
+
+.navLinks li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#checkBox {
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    nav {
+        height: 10vh;
+        padding: 0 1em;
+    }
+
+    nav label img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .buttonLabel {
+        display: block;
+    }
+
+    .navLinks {
+        position: fixed;
+        width: 100vw;
+        height: 90vh;
+        right: -110%;
+        bottom: 0;
+        background-color: #ff8dc8b9;
+        text-align: center;
+        padding: 0;
+        transition: right 0.5s ease;
+    }
+
+    .navLinks li {
+        display: block;
+        margin: 0;
+        padding: 2em, 0;
+    }
+
+    .navLinks li a {
+        font-size: xx-large;
+    }
+
+    #close {
+        display: none;
+    }
+
+    #checkBox:checked ~ ul {
+        right: 0;
+    }
+
+    #checkBox:checked ~ #open {
+        display: none;
+    }
+
+    #checkBox:checked ~ #close {
+        display: block;
+    }
+}

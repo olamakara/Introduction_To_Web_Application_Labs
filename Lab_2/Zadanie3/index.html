@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie3</title>
+    <link rel="stylesheet" href="css/gridcss.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+
+        .image {
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+            height: auto;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 480px) {
+            .box {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media only screen and (min-width: 480px) {
+            .box {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .box {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            .box {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .box {
+                grid-template-columns: repeat(5, 1fr);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <section>
+
+        <div class="box">
+
+            <div class="card">
+                <div><img class="image" src="images/warsaw-img.jpeg" alt="warsaw-img"></div>
+                <div class="description">
+                    <h3>Miasto 1</h3>
+                    <h4>Opis 1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque ex aspernatur unde dolorem porro accusamus explicabo. Nulla corrupti perferendis reprehenderit nam adipisci, tempore repellat autem pariatur obcaecati laboriosam at.</p>
+                    <hr>
+                    <section>
+
+                        <button class="button"><strong>Read article</strong></button>
+                        <div>💬 16 comments<br>🧡 322 likes</div>
+                
+                    </section>
+                </div>
+            </div>
+            <div class="card">
+                
+                <div><img class="image" src="images/krakow-img.jpg" alt="krakow-img"></div>
+                <div class="description">
+                    <h3>Miasto 2</h3>
+                    <h4>Opis 2</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque ex aspernatur unde dolorem porro accusamus explicabo. Nulla corrupti perferendis reprehenderit nam adipisci, tempore repellat autem pariatur obcaecati laboriosam at.</p>
+                    <hr>
+                    <section>
+
+                        <button class="button"><strong>Read article</strong></button>
+                        <div>💬 22 comments<br>🧡 417 likes</div>
+                
+                    </section>
+                </div>
+
+            </div>
+            <div class="card">
+
+                <img 
+                class="image"
+                src="images/wroclaw-img.jpg" 
+                alt="wroclaw-img"
+                >
+                <div class="description">
+                    <h3>Miasto 3</h3>
+                    <h4>Opis 3</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque ex aspernatur unde dolorem porro accusamus explicabo. Nulla corrupti perferendis reprehenderit nam adipisci, tempore repellat autem pariatur obcaecati laboriosam at.</p>
+                    <hr>
+                    <section>
+
+                        <button class="button"><strong>Read article</strong></button>
+                        <div>💬 22 comments<br>🧡 417 likes</div>
+                
+                    </section>
+                </div>
+
+            </div>
+            <div class="card">
+                
+                <div><img class="image" src="images/gdansk-img.jpg" alt="gdansk-img"></div>
+                <div class="description">
+                    <h3>Miasto 4</h3>
+                    <h4>Opis 4</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque ex aspernatur unde dolorem porro accusamus explicabo. Nulla corrupti perferendis reprehenderit nam adipisci, tempore repellat autem pariatur obcaecati laboriosam at.</p>
+                    <hr>
+                    <section>
+
+                        <button class="button"><strong>Read article</strong></button>
+                        <div>💬 22 comments<br>🧡 417 likes</div>
+                
+                    </section>
+                </div>
+
+            </div>
+            <div class="card">
+                
+                <div><img class="image" src="images/tarnobrzeg-img.jpg" alt="tarnobrzeg-img"></div>
+                <div class="description">
+                    <h3>Miasto 5</h3>
+                    <h4>Opis 5</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque ex aspernatur unde dolorem porro accusamus explicabo. Nulla corrupti perferendis reprehenderit nam adipisci, tempore repellat autem pariatur obcaecati laboriosam at.</p>
+                    <hr>
+                    <section>
+
+                        <button class="button"><strong>Read article</strong></button>
+                        <div>💬 22 comments<br>🧡 417 likes</div>
+                
+                    </section>
+                </div>
+
+            </div>
+            <div class="card">
+                
+                <div><img class="image" src="images/praga-img.jpg" alt="praga-img"></div>
+                <div class="description">
+                    <h3>Miasto 6</h3>
+                    <h4>Opis 6</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque ex aspernatur unde dolorem porro accusamus explicabo. Nulla corrupti perferendis reprehenderit nam adipisci, tempore repellat autem pariatur obcaecati laboriosam at.</p>
+                    <hr>
+                    <section>
+
+                        <button class="button"><strong>Read article</strong></button>
+                        <div>💬 22 comments<br>🧡 417 likes</div>
+                
+                    </section>
+                </div>
+
+            </div>
+            <div class="card">
+                
+                <div><img class="image" src="images/nowyjork-img.jpg" alt="nowyjork-img"></div>
+                <div class="description">
+                    <h3>Miasto 7</h3>
+                    <h4>Opis 7</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque ex aspernatur unde dolorem porro accusamus explicabo. Nulla corrupti perferendis reprehenderit nam adipisci, tempore repellat autem pariatur obcaecati laboriosam at.</p>
+                    <hr>
+                    <section>
+
+                        <button class="button"><strong>Read article</strong></button>
+                        <div>💬 22 comments<br>🧡 417 likes</div>
+                
+                    </section>
+                </div>
+
+            </div>
+            <div class="card">
+                
+                <div><img class="image" src="images/madryt-img.jpg" alt="madryt-img"></div>
+                <div class="description">
+                    <h3>Miasto 8</h3>
+                    <h4>Opis 8</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque ex aspernatur unde dolorem porro accusamus explicabo. Nulla corrupti perferendis reprehenderit nam adipisci, tempore repellat autem pariatur obcaecati laboriosam at.</p>
+                    <hr>
+                    <section>
+
+                        <button class="button"><strong>Read article</strong></button>
+                        <div>💬 22 comments<br>🧡 417 likes</div>
+                
+                    </section>
+                </div>
+
+            </div>
+            <div class="card">
+                
+                <div><img class="image" src="images/rzym-img.jpg" alt="rzym-img"></div>
+                <div class="description">
+                    <h3>Miasto 9</h3>
+                    <h4>Opis 9</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque ex aspernatur unde dolorem porro accusamus explicabo. Nulla corrupti perferendis reprehenderit nam adipisci, tempore repellat autem pariatur obcaecati laboriosam at.</p>
+                    <hr>
+                    <section>
+
+                        <button class="button"><strong>Read article</strong></button>
+                        <div>💬 22 comments<br>🧡 417 likes</div>
+                
+                    </section>
+                </div>
+
+            </div>
+            <div class="card">
+                
+                <div><img class="image" src="images/brazylia-img.jpg" alt="brazylia-img"></div>
+                <div class="description">
+                    <h3>Miasto 10</h3>
+                    <h4>Opis 10</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum cumque ex aspernatur unde dolorem porro accusamus explicabo. Nulla corrupti perferendis reprehenderit nam adipisci, tempore repellat autem pariatur obcaecati laboriosam at.</p>
+                    <hr>
+                    <section>
+
+                        <button class="button"><strong>Read article</strong></button>
+                        <div>💬 22 comments<br>🧡 417 likes</div>
+                
+                    </section>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

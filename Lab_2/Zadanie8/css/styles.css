@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.bg {
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%); 
+    height: 400px; 
+    width: 100%;     
+    background-color: rgb(113, 113, 233);
+}
+
+/* .bg::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    background: rgb(113, 113, 233);
+    transform: rotate(-30deg);
+} */
+
+/* .blue-bg {
+    width: 140vw;
+    position: absolute;
+    height: 700px;
+    background-color: rgb(113, 113, 233);
+    transform: rotate(-6deg);
+    z-index: -1;
+    top: -80px;
+    right: -150px;
+} */
+
+.container {
+    position: relative;
+    width: 100%;
+    bottom: 400px;
+    /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);  */
+    /* height: 600px; */
+    /* background-color: rgb(113, 113, 233); */
+}
+
+.form-example {
+    display: table;
+}
+
+.left {
+    animation-name: text-animation;
+    animation-duration: 4s;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50%;
+    color: white;
+}
+
+.form {
+    animation-name: forms-animation;
+    animation-duration: 4s;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20%;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: white;
+    padding: 30px;
+}
+
+.form-item {
+    border: none;
+    border-bottom: 1px solid #EEEEEE;
+    width: 100%;
+}
+
+@keyframes text-animation {
+    from {left: -55vw;}
+    to {left: 20px;}
+}
+
+@keyframes forms-animation {
+    from {right: -45vw;}
+    to {right: 20px;}
+}
+
+.more-info {
+    background-color: rgb(113, 113, 233);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.send {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(113, 113, 233);
+    color: white;
+    padding: 5px 18px;
+}
