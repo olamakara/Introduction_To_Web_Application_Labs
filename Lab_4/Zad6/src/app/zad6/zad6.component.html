@@ -1,0 +1,22 @@
+<div class="result-container">
+    <ng-container *ngFor="let card of cards; let i = index">
+        <div class="hidden-topics" [hidden]="IfShowTopic[i] == 0">
+            <h2>{{card.topic}}</h2>
+            <p>{{card.wholeTopicInformation}}</p>
+        </div>
+    </ng-container>
+</div>
+<div class="topics-container">
+    <h2>Choose Topic</h2>
+    <div class="topics">
+        <ng-container *ngFor="let card of cards; let i = index">
+            <div class="card">
+                <h3>{{card.topic}}</h3>
+                <section class="desc">
+                    <p>{{card.description}}</p>
+                    <button (click)="learnMore(i)">Learn more</button>
+                </section>
+                </div>
+        </ng-container>
+    </div>
+</div>

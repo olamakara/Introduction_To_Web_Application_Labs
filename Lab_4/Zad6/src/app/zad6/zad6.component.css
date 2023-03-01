@@ -1,0 +1,52 @@
+.topics-container {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    padding-bottom: 30px;
+}
+
+.topics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.topics div {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 20%;
+    padding: 0 20px 40px 20px;
+}
+
+.result-container {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0 auto;
+    margin-top: 10px;
+    min-height: 50px;
+    width: 50%;
+}
+
+.hidden-topics {
+    padding: 0 30px 10px 30px;
+}
+
+h2 {
+    text-align: center;
+}
+
+button {
+    border: 1px solid #fff;
+    border-radius: 15px;
+    background-color: #FF9F9F;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+button:hover {
+    border: 1px solid #FF9F9F;
+    background-color: #fff;
+    color: #FF9F9F;
+}

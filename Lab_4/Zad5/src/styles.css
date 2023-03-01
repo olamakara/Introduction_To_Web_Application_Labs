@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+    color: white;
+    background-image: url(./assets/images/background-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+}
+
+p {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+app-root {
+    text-align: center;
+    position: relative;
+    top: 150px;
+}

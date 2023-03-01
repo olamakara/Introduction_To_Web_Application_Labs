@@ -1,0 +1,13 @@
+<div class="stars">
+    <ng-container *ngFor="let bool of showRate; index as i">
+        <input type="checkbox" value=i/>
+        <label (click)="rate(i)"></label>
+    </ng-container>
+</div>
+<div class="rating">
+    <ng-container *ngFor="let bool of showRate; index as i">
+        <div class="rate" [ngStyle]="{'background-color': colorRate[i]}" [hidden]="showRate[i]==false">
+            {{rating[i]}}.0
+        </div>
+    </ng-container>
+</div>
