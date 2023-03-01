@@ -1,0 +1,45 @@
+body {
+    background-color: #FDF0E0;
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+}
+
+#ball {
+    background-color: #FFE3E1;
+    /* background-color: black; */
+    border: 10px solid #FFD1D1;
+    border-radius: 50%;
+    position: relative;
+    transition: 1s;
+    width: 30px;
+    height: 30px;
+    /* width: 2px;
+    height: 2px; */
+}
+
+#ball-container {
+    background-color: #fff;
+    border: 5px solid #FF9494;
+    cursor: pointer;
+    margin: 10px;
+    width: 700px;
+    overflow: hidden;
+    height: 500px;
+}
+
+#message {
+    color: #FF9494;
+    font-size: 1.2rem;
+    padding: 5px 20px;
+    display: none;
+    /* animation-name: message; */
+    animation-fill-mode: backwards;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+}
+
+@keyframes message {
+    0% {color: #FDF0E0;}
+    50% {color: #FF9494;}
+    100% {color: #FDF0E0;}
+}

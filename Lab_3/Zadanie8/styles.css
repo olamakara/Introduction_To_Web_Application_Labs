@@ -1,0 +1,58 @@
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 6px;
+}
+
+.color-green {
+    color: #4FA095;
+}
+
+.color-grey {
+    color: #D8D8D8;
+}
+
+.enter-password {
+    display: inline;
+    position: relative;
+}
+
+.requirements div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.requirements div i { 
+    margin: auto 0;
+}
+
+.text-window {
+    border: 1px solid #D8D8D8;
+    border-radius: 3px;
+    margin-top: 5px;
+    padding: 6px;
+    width: 200px;
+}
+
+#hidden-alert {
+    /* display: flex; */
+    display: none;
+    font-size: 0.7rem;
+    gap: 4px;
+    margin-top: 3px;
+    margin-left: 4px;
+}
+
+#hidden-alert i {
+    color: #FCD900;
+    margin: auto 0;
+}

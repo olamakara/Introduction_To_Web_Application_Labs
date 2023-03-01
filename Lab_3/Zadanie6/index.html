@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 6</title>
+
+    <script src="https://kit.fontawesome.com/0bc0532301.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contact-info">
+        <div>Imię i nazwisko <br>Telefon</div>
+        <button class="delete" onclick="deleteContact(this)"><i class="fa-solid fa-trash-can"></i></button>
+    </div>
+    <div id="contacts">
+
+    </div>
+    
+    <div id="form">
+        <form action="" id="forms">
+            <div class="add-bar">
+                <label for="fname">IMIĘ I NAZWISKO</label>
+                <input type="text" id="fname" name="firstname">
+            </div>
+            <div class="add-bar">
+                <label for="fnumber">TELEFON</label>
+                <input type="tel" id="fnumber" name="number">
+            </div>
+            <div class="add-bar">
+                <label for="submit" style="color: #fff;">k</label>
+                <input id="submit" type="button" value="Dodaj" onclick="addContact()">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

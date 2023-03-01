@@ -1,0 +1,172 @@
+body {
+    background-color: #D6E4E5;
+    color: #6B728E;
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+    color: #0D4C92;
+    margin-bottom: 50px;
+}
+
+h1 strong {
+    color: #5F9DF7;
+}
+
+button {
+    color: #fff;
+    cursor: pointer;
+    background-color: #6B728E;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+}
+
+.description {
+    margin: 0 auto;
+    width: 990px;
+    height: 430px;
+}
+
+.card {
+    width: 330px;
+    height: 430px;
+}
+
+.window {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 330px;
+    height: 430px;
+    overflow: hidden;
+    opacity: 1;
+}
+
+.middle-card {
+    width: 330px;
+    height: 430px;
+}
+
+@keyframes one {
+    0% {left: -330px;}
+    100% {left: 0;}
+}
+@keyframes two {
+    0% {left: 0;}
+    100% {left: 330px;}
+}
+@keyframes three {
+    0% {left: 330px;}
+    100% {left: -330px;}
+}
+@keyframes four {
+    0% {left: 0;}
+    100% {left: -660px;}
+}
+@keyframes five {
+    0% {left: -660px;}
+    100% {left: -330px;}
+}
+@keyframes six {
+    0% {left: -330px;}
+    100% {left: -990px;}
+}
+@keyframes seven {
+    0% {left: -990px;}
+    100% {left: -660px;}
+}
+@keyframes eight {
+    0% {left: -330px;}
+    100% {left: 330px;}
+}
+@keyframes nine {
+    0% {left: -330px;}
+    100% {left: -660px;}
+}
+@keyframes ten {
+    0% {left: -660px;}
+    100% {left: 0;}
+}
+@keyframes eleven {
+    0% {left: 330px;}
+    100% {left: 0;}
+}
+@keyframes twelve {
+    0% {left: -660px;}
+    100% {left: -990px;}
+}
+@keyframes thirteen {
+    0% {left: -990px;}
+    100% {left: -330px;}
+}
+@keyframes fourteen {
+    0% {left: 0;}
+    100% {left: -330px;}
+}
+
+.icon {
+    margin-top: 70px;
+}
+
+.icon button {
+    background-color: #D6E4E5;
+    color: #5F9DF7;
+    font-size: 4.5rem;
+}
+
+.img-and-buttons {
+    margin: auto 5%;
+    z-index: 5;
+}
+
+.job {
+    font-size: 1.05rem;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.name {
+    color: #5F9DF7;
+    font-size: 0.95rem;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.worker {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 3px #EAEAEA;
+    width: 200px;
+}
+
+.card-inside {
+    position: relative;
+    width: 310px;
+    padding: 0 10px;
+    height: 430px;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    opacity: 1;
+    right: 330px;
+}
+
+.right {
+    top: 50%;
+    right: 10%;
+    position: absolute;
+}
+
+.left {
+    top: 50%;
+    left: 10%;
+    position: absolute;
+}

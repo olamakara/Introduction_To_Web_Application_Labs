@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 5</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="action.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div id="one" onclick="addOne()">1
+            <div id="two" onclick="addTwo()">2
+                <div id="three" onclick="addFive()">5</div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div id="counter">
+        0
+    </div>
+    <br><br>
+    <div id="move">Aktualny ruch:
+        <div id="action-description"></div>
+    </div>
+    <br><br>
+    <button id="start-stop" onclick="propagation()">Start Propagation</button>
+    <button id="reset" onclick="resetCounter()">Reset</button>
+</body>
+</html>
