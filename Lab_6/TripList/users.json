@@ -1,0 +1,26 @@
+{
+    "ChpWfLOLn0dSX8XkcKAGakcH4492": 
+    {
+        "email": "donald@gmail.com",
+        "roles": {
+            "guest": true,
+            "client": true,
+            "menager": true,
+            "admin": true,
+            "banned": false
+        },
+        "uid": "ChpWfLOLn0dSX8XkcKAGakcH4492"
+    },
+    "wYNRNiXY6Ve6ZF11LwixKmoc1NE3": 
+    {
+        "email": "minnie@gmail.com",
+        "roles": {
+            "guest": true,
+            "client": true,
+            "menager": false,
+            "admin": false,
+            "banned": false
+        },
+        "uid": "wYNRNiXY6Ve6ZF11LwixKmoc1NE3"
+    }
+}
