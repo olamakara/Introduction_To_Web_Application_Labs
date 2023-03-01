@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+.trip-title {
+    font-family: 'Alex Brush', cursive;
+    font-size: 2.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.plus, .minus {
+    background-color: #B6E2A1;
+    border: none;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.plus {
+    padding: 4px 12px;
+}
+
+.minus {
+    padding: 4.5px 15px;
+}
+
+.photo {
+    width: 400px;
+    height: 300px;
+}
+
+.photos-container {
+    text-align: center;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.button {
+    margin: auto 0;
+}
+
+.button button {
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+}
+
+.fa-star {
+    color: #FFC107;
+}

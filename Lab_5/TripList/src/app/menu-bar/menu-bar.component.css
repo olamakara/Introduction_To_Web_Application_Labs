@@ -1,0 +1,183 @@
+body {
+    background-color: #FFDDD2;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+nav {
+    background-color: #B6E2A1;
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+.nothing {
+    height: 3rem;
+}
+
+.dropbtn {
+    font-size: 1.5rem;
+}
+
+.icons div {
+    margin-left: 10px;
+}
+
+p {
+    margin: 1em;
+    text-align: justify;
+}
+
+.navHeader {
+    font-size: x-large;
+}
+
+.navLinks {
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    float: right;
+}
+
+.buttonLabel {
+    display: none;
+    margin-right: 30px;
+}
+
+.navLinks li {
+    display: inline-block;
+    padding: 0.4em;
+}
+
+.navLinks li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.4em;
+    height: 100%;
+}
+
+#checkBox {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        height: 10vh;
+        padding: 0 1em;
+    }
+
+    .nothing {
+        height: 4.6rem;
+    }
+
+    nav label img {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
+
+    .buttonLabel {
+        display: block;
+    }
+
+    .navLinks {
+        position: fixed;
+        width: 100vw;
+        height: 90vh;
+        right: -110%;
+        bottom: 0;
+        background-color: #b5e2a1b4;
+        text-align: center;
+        padding: 0;
+        transition: right 0.5s ease;
+    }
+
+    .navLinks li {
+        display: block;
+        margin: 0;
+        padding: 2em, 0;
+    }
+
+    .navLinks li a {
+        font-size: xx-large;
+    }
+
+    #close {
+        display: none;
+    }
+
+    #checkBox:checked ~ ul {
+        right: 0;
+    }
+
+    #checkBox:checked ~ #open {
+        display: none;
+    }
+
+    #checkBox:checked ~ #close {
+        display: block;
+    }
+}
+
+.dropbtn {
+    background-color: #B6E2A1;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+  /* .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  } */
+  
+.dropdown:hover .dropdown-content {display: block;}
+  
+  /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.currency {
+    text-align: right;
+    margin: 5px 6px;
+}
+
+.currency button {
+    border: none;
+    border-radius: 5px;
+    background-color: #B6E2A1;
+    margin-left: 5px;
+    padding: 5px 7px;
+    cursor: pointer;
+}
+
+.navLogo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}

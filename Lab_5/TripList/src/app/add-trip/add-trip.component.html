@@ -1,0 +1,40 @@
+<div class="form-container">
+    <h3>DODAJ WYCIECZKĘ</h3>
+    <form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+        <div>
+            <div class="form-inside">
+                <label>Nazwa wycieczki</label>
+                <input name="tripName" type="string" formControlName="tripName">
+            </div>
+            <div>
+                <label>Kraj</label>
+                <input name="country" type="string" formControlName="country">
+            </div>
+            <div>
+                <label>Data wyjazdu</label>
+                <input name="start" type="date" formControlName="start">
+            </div>
+            <div>
+                <label>Data powrotu</label>
+                <input name="end" type="date" formControlName="end">
+            </div> 
+            <div>
+                <label>Cena</label>
+                <input name="price" type="number" formControlName="price">
+            </div>
+            <div>
+                <label>Ilość miejsc</label>
+                <input name="numberOfPlaces" type="number" formControlName="numberOfPlaces">
+            </div>
+            <div>
+                <label>Opis</label>
+                <input name="description" type="string" formControlName="description">
+            </div>
+            <div>
+                <label>Zdjęcie</label>
+                <input name="img" type="string" formControlName="img">
+            </div>
+            <button type="submit">Dodaj wycieczkę</button>
+        </div>
+    </form>
+</div>

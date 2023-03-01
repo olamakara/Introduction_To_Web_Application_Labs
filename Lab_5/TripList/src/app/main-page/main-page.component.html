@@ -1,0 +1,26 @@
+<div class="trip-container">
+    <ng-container *ngFor="let trip of trips; let i = index">
+        <div class="card" [ngStyle]="{'border': minPrice(trip.price) ? '2px solid #B6E2A1': maxPrice(trip.price) ? '2px solid #FF5858': '1px solid #D8D8D8', 'background-color': ifNoPlaces(i) ? '#e977776b': 'white'}">
+            <div class="card-inside">
+                <div [ngStyle]="{'opacity':changeOpacity(trip.numberOfPlaces) ? 0.5: 1}">
+                    <a routerLink="/offer/{{trip.id}}"><img src={{trip.img[0]}} alt="trip-img"></a>
+                    <p class="trip-name">{{trip.tripName | uppercase}}</p>
+                    <p class="country">{{trip.country | uppercase}}</p>
+                    <p class="dates">{{trip.start}} - {{trip.end}}</p>
+                    <!-- <p class="description">{{trip.description}}</p> -->
+                    <br>
+                    <p class="price">{{trip.price * currencyConverter.currencyConverter | currency:currencyConverter.currentCurrency:"symbol"}}</p>
+                </div>
+            </div>
+            <div class="buttons-container">
+                <p class="places">{{trip.numberOfPlaces}}</p>
+                <button class="plus"(click)="addTrip(i)" [hidden]="trip.numberOfPlaces == 0">+</button>
+                <button class="minus"(click)="removeTrip(i)" [hidden]="trip.numberOfPlaces == maxAmountOfPlaces[i]">-</button>
+            </div><br>
+            <button class="delete-trip" (click)="deleteTrip(i, trip.id)">USUŃ</button>
+            <!-- <star-rate></star-rate> -->
+        </div>
+    </ng-container>
+</div>
+<hr>
+

@@ -1,0 +1,20 @@
+<h3>Historia wycieczek</h3>
+<div class="filters">
+    <button (click)="ifHistory()"><i class="fa-solid fa-calendar-check"></i></button>
+    <button (click)="ifNow()"><i class="fa-solid fa-calendar-day"></i></button>
+    <button (click)="ifBefore()"><i class="fa-solid fa-calendar-xmark"></i></button>
+    <button (click)="all()"><strong>Wszystkie</strong></button>
+</div>
+<br><br>
+<div class="history-content">
+    <ng-container *ngFor="let trip of basketService.historyTrips; index as i">
+        <div class="history-trip" [hidden]="checkHistory(trip) && checkNow(trip) && checkBefore(trip) && checkAll()">
+            <p class="buy-date">Data zakupu: {{ today }}</p>
+            <p class="name">{{ trip.tripName }}</p>
+            <p class="country">->{{ trip.country }}</p>
+            <p class="date">{{ trip.start }} - {{ trip.end }}</p>
+            <p class="price">{{trip.price * currencyConverter.currencyConverter * basketService.historyTripsCount[i] | currency:currencyConverter.currentCurrency:"symbol"}}</p>
+            <p class="places">Liczba miejsc: {{ basketService.historyTripsCount[i] }}</p>
+        </div><hr>
+    </ng-container>
+</div>
