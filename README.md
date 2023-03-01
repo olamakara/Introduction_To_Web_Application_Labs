@@ -1,1 +1,2 @@
-# Introduction_To_Web_Application_Labs
+# Introduction To Web Application Labs
+Labs from the Introduction To Web Applications course at AGH.
